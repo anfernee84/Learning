@@ -141,16 +141,18 @@ while (count<=5);
 
 
 /*
+// первое задание
 var x = -5;
 for (;x<=5;x=x+0.2)
 {
 y=Math.pow(x,2)+2*x-7;
-y=Math.round(y*1000)/1000;
+//y=Math.round(y*1000)/1000;
 document.write(y+ '<br>');
 }
 */
 
 /*
+//второе задание - через массив
 var array = [0,1,2,3,4,5,6,7,8,9];
 var sum = 0;
 for (var i=0; i<array.length;i++){
@@ -161,6 +163,7 @@ document.write(sum+ '<br>');
 
 
 /*
+//второе задание через ввод данных
 n = prompt('Введите кол-во членов числовой последовательности')
 s = 0
 for (i=1; i<=n; i++){
@@ -168,7 +171,29 @@ s = i / (Math.pow(i,2)+1)
 }
 document.write(s+ '<br>');
 */
-var arr = (3,6,9,12,15,18,21,24);
+
+//третье задание через while
+/*
+x = 1;
+t = 1;
+while (t<=24){
+x = x*2;
+t= t+3;
+}
+document.write(x + '<br>');
+*/
+
+//третье задание через do...while
+/*
+var x = 1;
+var t = 1;
+do {
+x = x*2;
+t= t+3;}
+while (t<=24);
+document.write(x + '<br>');
+*/
+
 
 
 </script>
