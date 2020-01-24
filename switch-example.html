@@ -11,7 +11,6 @@ switch (arg) {
   case 'Safari':
     alert('Ты юзаешь норм браузер');
     break;
-
   default:
     alert('я хз,но надеюсь это работает');
 }
@@ -117,28 +116,38 @@ while (i<=100)
 {
 	sum = sum+i;
 	i++;
-
 }
 document.write(sum);
 */
 /*
 var arr = [1,2,3,4,5];
-var sum=0
+sum=0
 
 for (var i=0;i<arr.length;i++){
 sum=sum+arr[i]
 }
 document.write(sum);
 */
-/*
-var count = 0;
-do {
-	document.write (count + '<br>');
-	count = count+1;
-}
-while (count<=5);
-*/
 
+/*
+//первое задание через ввод данных
+        var x = Number(prompt('Введите нижнюю границу массива'));
+        var t = Number(prompt('Ввежите верхнюю границу массива'));
+        var z = Number(t-x); //длина отрезка
+        var s = Number(prompt('Введите шаг не более пятой части от длины отрезка'));
+        if (s>z/5){ //Проверяем шаг
+            document.write('Введен шаг более пятой части');
+        }
+        else {
+            for (;x<=t;x=x+s)
+			{
+                y=Math.pow(x,2)+2*x-7;
+                //y=Math.round(y*1000)/1000;
+                document.write(y+ '<br>');
+            }
+			}
+*/
+		
 
 /*
 // первое задание
@@ -162,7 +171,7 @@ document.write(sum+ '<br>');
 */
 
 
-/*
+
 //второе задание через ввод данных
 n = prompt('Введите кол-во членов числовой последовательности')
 s = 0
@@ -170,7 +179,7 @@ for (i=1; i<=n; i++){
 s = i / (Math.pow(i,2)+1)
 }
 document.write(s+ '<br>');
-*/
+
 
 //третье задание через while
 /*
@@ -198,4 +207,3 @@ document.write(x + '<br>');
 
 </script>
 <html>
-
