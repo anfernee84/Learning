@@ -1,30 +1,10 @@
 <html>
     <script>
-        /*
-let arr = ["Яблоко", "Апельсин", "Груша"];
-
-for (let i = 0; i < arr.length; i++) {
-  document.write( arr[i]+"<br>");
-}
-*/
-
-/*
-let styles = ['Jazz','Blues'];
-styles.push('Rock-n-roll');
-styles[Math.floor((styles.length - 1)/2)] = 'Classical';
-alert(styles);
-alert(styles.shift());
-styles.unshift('Rap','Reggae');
-alert(styles);
-*/
-
-
 
 //task 1 все элементы на нечетных позициях заменить на единицу
 var array =[5,8,9,12,15,16,17,19,22];
 for (var i=0;i<array.length;i++){
-    if ([i]%2==1)
-    continue;
+    if ([i]%2!=0) continue;
     array.splice(i,1,'1');
     }
     alert('Task 1:  '+ array);
@@ -33,8 +13,7 @@ for (var i=0;i<array.length;i++){
 //task 2 все элементы на четных позициях меняем на ноль
 var array =[5,8,9,12,15,16,17,19,22];
 for (var i=0;i<array.length;i++){
-    if ([i]%2==0)
-    continue;
+    if ([i]%2==0) continue;
     array.splice(i,1,'0');
     }
     alert('Task 2:  '+array);
@@ -43,7 +22,7 @@ for (var i=0;i<array.length;i++){
 //task 3 все четные элементы меняем на ноль
 var array =[5,8,9,12,15,16,17,19,22];
 for (var i=0;i<array.length;i++){
-    if(array[i]%2) continue;
+    if([i]%2==0) continue;
     array.splice(i,1,'0');
     }
     alert('Task 3:  '+array);
@@ -52,7 +31,7 @@ for (var i=0;i<array.length;i++){
 //task 4 все нечетные элементы заменить на единицу
 var array =[5,8,9,12,15,16,17,19,22];
 for (var i=0;i<array.length;i++){
-    if(array[i]%2==0) continue;
+    if([i]%2!=0) continue;
     array.splice(i,1,'1');
     }
     alert('Task 4:  '+array);
@@ -88,18 +67,16 @@ var reducereven = (accumulator, currentValue) => accumulator + currentValue;
 var reducerodd = (accumulator, currentValue) => accumulator + currentValue;
 //var sumeven = 0;
 //var sumodd = 0;
-for (var i=0;i<array.length;i++)
-    {
-    if([i]%2!=0) continue;
+for (var i=0;i<array.length;i++){
+    if([i]%2==0){
     arrayeven.push(array[i]);
 //    sumeven += array[i];
     }
-for (var i=0;i<array.length;i++)
-    {
-    if([i]%2==0) continue;
+    else if([i]%2!=0) {
     arrayodd.push(array[i]);
 //    sumodd += array[i];
     }
+}
 //alert(sumeven);
 //alert(sumodd);
 alert('Task 7: сумма элементов с четными индексами:  '+arrayeven.reduce(reducereven));
@@ -109,26 +86,65 @@ alert('Task 7: сумма элементов с нечетными индекс�
 //task 8 все минимальные и максимальные значения поменять местами, т.е. дано, например:
 //а = [5,7,1,2,7]; b = [2,8,1,1,5]; будет: a = [5,8,1,2,7]; b = [2,7,1,1,5];
 
-var a = [2,1,6,1,9];
+var a = [2,1,6,1,-5];
 var b = [4,8,5,2,9];
-var sortmas1 = [];
-var sortmas2 = [];
-for(var i = 0; i < a.length; ++i){
-    if(a[i] > b[i]) {
-        sortmas1.push(a[i]);
-        sortmas2.push(b[i]);
+//var maxa = a[0];
+//var mina = a[0];
+//var maxb = a[0];
+//var minb = a[0];
+var maxa = Math.max.apply(Math, a);
+var mina = Math.min.apply(Math, a);
+var maxb = Math.max.apply(Math, b);
+var minb = Math.min.apply(Math, b);
+/*
+    for(i=1;i<a.length;i++)
+    {
+        if(a[i]>maxa)
+        {
+        maxa=a[i];
+        }
+        else 
+            if (a[i]<mina) 
+            {
+            mina=a[i];
+            }
     }
-    else if (a[i] < b[i]) {
-        sortmas1.push (b[i]);
-        sortmas2.push (a[i]);
+    for(i=1;i<b.length;i++) 
+    {
+        if(b[i]>minb) 
+        {
+            minb=b[i];
+        }
+        else 
+            if (b[i]<minb) 
+            {
+            minb=b[i];
+            }
     }
-    else if (a[i] == b[i]) {
-        sortmas1.push (b[i]);
-        sortmas2.push (a[i]);
+    */
+
+    for (i=0;i<a.length;i++) {
+        if (a[i] == maxa) {
+            a[i] = maxb;
+        }
+        else if (a[i] == mina) {
+                a[i] = minb;
+        }
     }
-}
-    alert('Task 8: массив с бОльшими значениями из двух массивов:  '+sortmas1);
-    alert('Task 8: массив с меньшими значениями из двух массивов:  '+sortmas2);
+    for (i=0;i<b.length;i++) {
+        if (b[i] == maxb) {
+            b[i] = maxa;
+        }
+        else if (b[i] == minb) {
+                b[i] = mina;
+        }
+    }
+
+               
+    alert('Task 8: массив с бОльшими значениями из двух массивов:  '+a);
+    alert('Task 8: массив с меньшими значениями из двух массивов:  '+b);
+
+
 
 //task 9 Информация о среднесуточной температуре воздуха за месяц задана в виде массива.
 //определить, сколько дней температура была ниже 0.
@@ -150,6 +166,7 @@ for(let i = n; i >= 0; i--) {
     arr.push(i)
 }
 alert('Task 10: Массив имеет вид '+arr);
+
 
 
     </script>
