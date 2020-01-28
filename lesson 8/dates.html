@@ -1,0 +1,31 @@
+<html>
+    <script>
+
+let d = new Date();
+document.write(d+'<br>');
+d.getFullYear();
+document.write(d.getFullYear()+'<br>');
+document.write(d.getHours()+':'+d.getMinutes()+':'+d.getSeconds()+'<br>');
+
+//methods, которые начинаются с set устанавливают значения
+d.setFullYear(2021);
+document.write(d.getFullYear()+'<br>');
+document.write(d+'<br>');
+document.write(d.getDate()+','+d.getDay()+'<br>');
+
+
+//определить четное или не четное число
+if (d.getDate()%2==0){
+document.write(d.getDate()+ ' today is even'+'<br>');
+}
+else
+{
+    document.write(d.getDate()+ ' today is odd'+'<br>');
+}
+document.write( (d.getDate()%2==0)? ' today is even' : ' today is odd');
+
+
+
+
+    </script>
+    </html>
