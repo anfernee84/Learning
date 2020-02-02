@@ -1,0 +1,35 @@
+<html>
+    <script>
+//дан двумерный массив. вывести номера строк этого массива, в которых знаки чередуются
+       //v.1 
+        a = [[-2,1,-1,2],
+            [1,1,-1,1],
+            [1,-4,1,-1]];
+            for (i=0;i<a.length;i++)
+                {
+                count=0;
+                for (j=0;j<a[i].length-1;j++)
+                if (a[i][j]*a[i][j+1]<0)
+                count++;
+                    console.log(count);
+                    if(count == a[i].length-1)
+                    document.write((i+1)+',');
+                }
+                
+        //v.2
+                flag = false;
+                for (i=0;i<a.length;i++)
+                {
+                    for (j=0;j<a[i].length-1;j++) 
+                    if (a[i][j]*a[i][j+1]<0) flag = true;
+                    else {flag = false; break;}
+                    if (flag) 
+                    document.write((i+1)+',');
+                }
+
+
+            
+            
+
+    </script>
+</html>

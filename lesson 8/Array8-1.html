@@ -1,0 +1,23 @@
+<html>
+<script>
+a = [11,22,33,44,55,66,77];
+/*
+temp = 0;
+b = [];
+for (i=0; i<a.lenght; i++)
+{
+    b = a[i];
+    a[i] = a [(a.length-1)-i];
+    a[a.lenght -1] = b;
+}
+alert (b);
+*/
+for (i=0; i<a.length/2; i++)
+{
+    temp = a[i];
+    a[i] = a [a.length-1-i];
+    a[a.length -1 -i] = temp;
+}
+alert (a);
+</script>
+</html>

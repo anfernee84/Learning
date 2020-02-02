@@ -1,0 +1,118 @@
+        <html>
+            <script>
+        
+        
+    
+        a = [[1,2,3,4],
+             [5,6,7,8],
+             [9,1,2,3]];
+             //найти максимальный элемент
+        max = a [0][0];
+
+             for (i = 0; i<a.length;i++){
+                for(j=0; j<a[i].length; j++){
+                if (a[i][j]>=max)
+                max = a[i][j]
+                }
+            }
+
+            document.write(max+'<br>');
+        
+             for (i=0; i<a.length;i++)
+             {
+                 for (j=0;j<a[i].length;j++)
+                 document.write(a[i][j]+' ');
+                 document.write('<br>');
+             }
+            
+             //меняем мстами строки р1 и р2
+             r1 = 1;
+             r2 = 3; //номер, а не индекс
+             for (i = 0;i<a[r1-1].length; i++)
+             {
+                 temp = a[r1-1][i];
+                 a[r1-1][i] = a[r2-1][i];
+                 a[r2-1][i] = temp
+             }
+             //вывод элемента
+             for (i=0; i<a.length;i++)
+             {
+                 for (j=0;j<a[i].length;j++)
+                 document.write(a[i][j]+' ');
+                 document.write('<br>');
+             }
+
+             с1 = 1;
+             с2 = 3; //номер, а не индекс
+             for (i = 0;i<a.length; i++)
+             {
+                 temp = a[i][с1-1];
+                 a[i][с1-1] = a[i][с2-1];
+                 a[i][с2-1] = temp
+             }
+
+            //вывод элемента
+             for (i=0; i<a.length;i++)
+             {
+                 for (j=0;j<a[i].length;j++)
+                 document.write(a[i][j]+' ');
+                 document.write('<br>');
+             }
+             //диагонали -правая и левая
+             b = [[1,2,3],
+                  [5,6,7],
+                  [9,1,2]];
+
+                for (i = 0;i<b.length; i++)
+                {
+                    document.write(b[i][i]+'  ');
+                    
+                }
+                for (i = 0;i<b.length; i++)
+                {
+                    document.write(b[i][b.length-1-i]+' ');
+                    
+                }
+
+                //сформировать массив [m:n].
+                //из него сформировать два одномерных массива:
+                //1. сумма положительных элементов по строкам
+                //2. количество отрицательных по столбцам
+                a = [[1,-2,3,4],
+                    [1,2,-3,-4],
+                    [1,2,-3,4]];
+                s = [];
+                c = [];
+                sum = 0;
+                c
+                
+                for (i=0;i<a.length;i++)
+                {
+                    sum=0;
+                    for(j=0;j<a[i].length;j++)
+                    if (a[i][j]>0) //идем построкам
+
+                        sum += a[i][j];//считаем сумму положительных
+
+                        s[i] = sum; //сумму сохраним в переменную
+                }
+                console.dir('s='+s);
+
+
+
+                for (i=0;i<a[0].length;i++)
+                {
+                    count=0;
+                    for(j=0;j<a.length;j++)
+                    if (a[j][i]<0) //идем по столбцам
+                        count++;
+                        
+
+                    c[i] = count;
+                }
+                console.dir('с='+c);
+                
+              
+
+            </script>
+        </html>
