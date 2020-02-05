@@ -1,0 +1,32 @@
+
+<html>
+<script>
+var a = [2,1,6,1,-5];
+var b = [4,8,5,2,9];
+
+    var maxa = Math.max.apply(Math, a);
+    var mina = Math.min.apply(Math, a);
+    var maxb = Math.max.apply(Math, b);
+    var minb = Math.min.apply(Math, b);
+    for (i=0;i<a.length;i++) {
+        if (a[i] == maxa) {
+            a[i] = maxb;
+        }
+        else if (a[i] == mina) {
+                a[i] = minb;
+        }
+    
+    }
+    for (i=0;i<b.length;i++) {
+        if (b[i] == maxb) {
+            b[i] = maxa;
+        }
+        else if (b[i] == minb) {
+                b[i] = mina;
+        }
+    }
+
+    alert('Task 8: массив с бОльшими значениями из двух массивов:  '+a);
+    alert('Task 8: массив с меньшими значениями из двух массивов:  '+b);
+</script>
+</html>

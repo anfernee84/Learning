@@ -1,0 +1,156 @@
+<html>
+    <script>
+        /*
+let arr = ["Яблоко", "Апельсин", "Груша"];
+
+for (let i = 0; i < arr.length; i++) {
+  document.write( arr[i]+"<br>");
+}
+*/
+
+/*
+let styles = ['Jazz','Blues'];
+styles.push('Rock-n-roll');
+styles[Math.floor((styles.length - 1)/2)] = 'Classical';
+alert(styles);
+alert(styles.shift());
+styles.unshift('Rap','Reggae');
+alert(styles);
+*/
+
+
+
+//task 1 все элементы на нечетных позициях заменить на единицу
+var array =[5,8,9,12,15,16,17,19,22];
+for (var i=0;i<array.length;i++){
+    if ([i]%2==1)
+    continue;
+    array.splice(i,1,'1');
+    }
+    alert('Task 1:  '+ array);
+
+
+//task 2 все элементы на четных позициях меняем на ноль
+var array =[5,8,9,12,15,16,17,19,22];
+for (var i=0;i<array.length;i++){
+    if ([i]%2==0)
+    continue;
+    array.splice(i,1,'0');
+    }
+    alert('Task 2:  '+array);
+
+
+//task 3 все четные элементы меняем на ноль
+var array =[5,8,9,12,15,16,17,19,22];
+for (var i=0;i<array.length;i++){
+    if(array[i]%2) continue;
+    array.splice(i,1,'0');
+    }
+    alert('Task 3:  '+array);
+
+
+//task 4 все нечетные элементы заменить на единицу
+var array =[5,8,9,12,15,16,17,19,22];
+for (var i=0;i<array.length;i++){
+    if(array[i]%2==0) continue;
+    array.splice(i,1,'1');
+    }
+    alert('Task 4:  '+array);
+
+
+//task 5 дан массив "а", состоящий из к целых положительных чисел.
+//Записать все четные по значению элементы массива "а" в массив "в"  
+var a =[5,8,9,12,15,16,17,19,22];
+var b = [];
+for (var i=0;i<=array.length;i++){
+    if(a[i]%2!=0) continue;
+    b.push(a[i]);
+}
+    alert('Task 5:  '+b);
+
+
+
+//task 6 изменить знак всех нечетных элементов массива
+var array =[5,8,9,12,15,16,17,19,22];
+for (var i=0;i<array.length;i++){
+    if(array[i]%2==0) 
+    continue;
+    array[i] = array[i] * -1;
+}
+    alert('Task 6:  '+array);
+
+
+//task 7 вычислить суммы элементов отдельно с четными и нечетными индексами
+var array =[5,8,9,12,15,16,17,19,22];
+var arrayeven = [];
+var arrayodd = [];
+var reducereven = (accumulator, currentValue) => accumulator + currentValue;
+var reducerodd = (accumulator, currentValue) => accumulator + currentValue;
+//var sumeven = 0;
+//var sumodd = 0;
+for (var i=0;i<array.length;i++)
+    {
+    if([i]%2!=0) continue;
+    arrayeven.push(array[i]);
+//    sumeven += array[i];
+    }
+for (var i=0;i<array.length;i++)
+    {
+    if([i]%2==0) continue;
+    arrayodd.push(array[i]);
+//    sumodd += array[i];
+    }
+//alert(sumeven);
+//alert(sumodd);
+alert('Task 7: сумма элементов с четными индексами:  '+arrayeven.reduce(reducereven));
+alert('Task 7: сумма элементов с нечетными индексами:  '+arrayodd.reduce(reducerodd));
+
+
+//task 8 все минимальные и максимальные значения поменять местами, т.е. дано, например:
+//а = [5,7,1,2,7]; b = [2,8,1,1,5]; будет: a = [5,8,1,2,7]; b = [2,7,1,1,5];
+
+var a = [2,1,6,1,9];
+var b = [4,8,5,2,9];
+var sortmas1 = [];
+var sortmas2 = [];
+for(var i = 0; i < a.length; ++i){
+    if(a[i] > b[i]) {
+        sortmas1.push(a[i]);
+        sortmas2.push(b[i]);
+    }
+    else if (a[i] < b[i]) {
+        sortmas1.push (b[i]);
+        sortmas2.push (a[i]);
+    }
+    else if (a[i] == b[i]) {
+        sortmas1.push (b[i]);
+        sortmas2.push (a[i]);
+    }
+}
+    alert('Task 8: массив с бОльшими значениями из двух массивов:  '+sortmas1);
+    alert('Task 8: массив с меньшими значениями из двух массивов:  '+sortmas2);
+
+//task 9 Информация о среднесуточной температуре воздуха за месяц задана в виде массива.
+//определить, сколько дней температура была ниже 0.
+
+var temp = [4,-1,-4,5,8,-3,9,2,5,-6,1,4,-2,6,4,-6,-2,-10,0,-3,2,6,2,1,-2,-8,-11,-10,-4,0];
+var subzero = [];
+    for(var i = 0; i < temp.length; ++i){
+        if (temp[i] <= 0){
+        subzero.push(temp[i])
+        }
+        }
+        alert('Task 9: отрицательная температура была '+ subzero.length + ' дней.');
+
+//task 10 заполнить одномерный массив из N элементов цифрами N,...,4,3,2,1
+
+var n = parseInt(prompt('Enter a last digit of array'));
+arr = [];
+for(let i = n; i >= 0; i--) {
+    arr.push(i)
+}
+alert('Task 10: Массив имеет вид '+arr);
+
+
+    </script>
+</html>

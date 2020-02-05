@@ -1,0 +1,222 @@
+<html>
+<script>
+
+//let browser = prompt('Введите название Вашего браузера');
+/*
+switch (arg) {
+  case 'Edge':alert('WTF?'); break;
+  case 'Chrome':
+  case 'Firefox':
+  case 'Opera':
+  case 'Safari':
+    alert('Ты юзаешь норм браузер');
+    break;
+  default:
+    alert('я хз,но надеюсь это работает');
+}
+*/
+/*
+if (browser == 'Edge'){
+	alert('wtf?');
+	}
+else	
+	if (browser=='Chrome'||browser=='Safari'||browser=='Firefox'||browser=='Opera'){
+	alert('Ты юзаешь норм браузер');
+	}
+	else {
+	alert('я хз,но надеюсь это работает');
+	}
+*/
+/*
+var number = parseInt(prompt('Enter a digit from 0 to 3', ''));
+	switch (number){
+	case 1:alert('You entered digit 1'); break;
+	case 2:
+	case 3:alert('You entered digit 2 or 3'); break
+	default:alert('You entered 0');
+	}
+*/
+/*
+let month = prompt('Введите название месяца');
+	switch (month){
+	case 'Январь':
+	case 'Февраль':
+	case 'Декабрь':
+		alert('Это зимний месяц'); break;
+	case 'Март':
+	case 'Апрель':
+	case 'Май':
+		alert('Это весенний месяц'); break;
+	case 'Июнь':
+	case 'Июль':
+	case 'Август':
+		alert('Это летний месяц'); break;	
+	case 'Сентябрь':
+	case 'Октябрь':
+	case 'Ноябрь':
+		alert('Это осенний месяц'); break;
+	default:alert('Введено не верное значение');
+	}
+*/
+/*
+let a = parseInt(prompt('Введите значение переменной а', ''));
+let b = parseInt(prompt('Введите значение переменной b', ''));
+ if ((a>=2&&a<=11)||(b>=6&&b<=14)){
+ alert('верно');
+ }
+ else {
+ alert('не верно');
+ }
+ */
+ /*
+ let a = parseInt(prompt('Введите значение переменной а', ''));
+  if ((a==0)||(a==2)){
+		a=(a+7);
+		}
+		else{
+		a=(a/10);
+		}
+		alert('Значение переменной а равно '+a);
+		*/
+/*		
+var flowers = ["Rose", "Lily", "Tulip", "Jasmine", "Orchid"];
+for (var i = 0; i < flowers.length; i++){ 
+  alert(flowers[i] + " - это цветок.");
+}
+*/
+/*
+let i = 11;
+while (i<34)
+{
+	document.write(i + '<br>');
+	i++;
+}
+*/
+
+/*
+var i = 1;
+for (; i<=100; i++){
+	if (i%2==0)
+	document.write(i+ '<br>');
+}
+*/
+
+//var sum = 0; for (var i = 1; i <= 100; i++) { sum += i; }
+/*
+var sum=0;
+for (var i=1;i<=100;i++)
+{sum=sum+i;}
+	document.write(sum +'<br>');
+*/
+
+/*
+var i = 1;
+var sum = 0;
+while (i<=100)
+{
+	sum = sum+i;
+	i++;
+}
+document.write(sum);
+*/
+/*
+var arr = [1,2,3,4,5];
+sum=0
+for (var i=0;i<arr.length;i++){
+sum=sum+arr[i]
+}
+document.write(sum);
+*/
+
+/*
+//первое задание через ввод данных
+        var x = Number(prompt('Введите нижнюю границу массива'));
+        var t = Number(prompt('Ввежите верхнюю границу массива'));
+        var z = Number(t-x); //длина отрезка
+        var s = Number(prompt('Введите шаг не более пятой части от длины отрезка'));
+        if (s>z/5){ //Проверяем шаг
+            document.write('Введен шаг более пятой части');
+        }
+        else {
+            for (;x<=t;x=x+s)
+			{
+                y=Math.pow(x,2)+2*x-7;
+                //y=Math.round(y*1000)/1000;
+                document.write(y+ '<br>');
+            }
+			}
+*/
+		
+
+/*
+// первое задание
+var x = -5;
+for (;x<=5;x=x+0.2)
+{
+y=Math.pow(x,2)+2*x-7;
+//y=Math.round(y*1000)/1000;
+document.write(y+ '<br>');
+}
+*/
+
+/*
+//второе задание - через массив
+var array = [0,1,2,3,4,5,6,7,8,9];
+var sum = 0;
+for (var i=0; i<array.length;i++){
+sum = array[i] / (Math.pow(array[i],2)+1)
+}
+document.write(sum+ '<br>');
+*/
+
+/*
+
+//второе задание через ввод данных
+n = prompt('Введите кол-во членов числовой последовательности')
+s = 0
+for (i=1; i<=n; i++){
+s = i / (Math.pow(i,2)+1)
+}
+document.write(s+ '<br>');
+*/
+
+//третье задание через while
+/*
+x = 1;
+t = 1;
+while (t<=24){
+x = x*2;
+t= t+3;
+
+document.write(x + '<br>');
+}
+*/
+
+
+
+//третье задание через for
+t = 3;//временной отрезок
+for (x=1;t<=24;t+=3)
+{
+	x=x*2
+	document.write('Через '+t+' ч. будет '+x+' амеб <br>');
+}
+
+
+
+
+//третье задание через do...while
+/*
+var x = 1;
+var t = 1;
+do {
+x = x*2;
+t= t+3;}
+while (t<=24);
+document.write(x + '<br>');
+*/
+
+
+
+</script>
+<html>
