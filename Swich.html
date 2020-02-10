@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form name = frm>
+        Будете в субботу на занятии<br>
+        <input type=radio name = r1 value='Yep'>YEP
+        <input type=radio name = r1 value='Nope'>NOPE
+        <input type=radio name = r1 value='X3'>X3
+        <input type=button value = 'Result' onclick = F(frm.r1)>
+        </form>
+        <br>
+        <script>
+            function F(arr){
+                for (i=0;i<arr.length;i++){
+                    if (arr[i].checked){
+                    alert((i+1)+' '+arr[i].value);
+                    break
+                }
+                
+            }
+        }
+
+        </script>
+
+
+    </body>
+</html>
