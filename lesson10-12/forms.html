@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <input type=button value='Green' onclick=ColorBackground(this.value) id=a >
+        <input type=button value='Red' onclick=ColorBackground(this.value) id=a >
+        <input type=button value='Yellow' onclick=ColorBackground(this.value) id=a >
+        <br>
+        <input type = text id = v > 
+        <input type = button value="Ok" onclick=T(v.value)>
+        <!--
+        <br>
+        <input type=checkbox name=ch id=b >
+        <br>
+        <input type=radio name= >
+        <br>
+        <input type=text value="Ok" name = txt id = d>
+        <br>
+        -->
+        <script>
+            function ColorBackground(c)
+        {
+            document.bgColor = c;
+        }
+
+        function T(str)
+        {
+            document.write(str);
+        }
+
+
+        </script>
+
+
+    </body>
+</html>

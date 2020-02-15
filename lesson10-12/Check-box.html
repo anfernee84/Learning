@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <form name = frm>
+        Your wishes:<br>
+        <input type=checkbox name = r1 value='Car'>Car<br>
+        <input type=checkbox name = r1 value='Flat'>Flat<br>
+        <input type=checkbox name = r1 value='House'>House<br>
+        <input type=button value = 'See values' onclick = F(frm.r1)>
+        </form>
+        <br>
+        <script>
+            function F(arr){
+                str='';
+                for (i=0;i<arr.length;i++)
+                    if (arr[i].checked)
+                    str = str + arr[i].value+' ';
+                    
+                    alert(str);
+                    
+                               
+            
+        }
+
+        </script>
+
+
+    </body>
+</html>

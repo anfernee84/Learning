@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <input type=text id = txt1>
+        <input type = button value="left" onclick=Left()>
+        <input type = button value="right" onclick=Right()>
+        <input type=text id = txt2>
+
+        <script>
+            function Left(){
+                txt1.value = txt2.value
+                txt2.value = ''
+            }
+
+            function Right(){
+                txt2.value = txt1.value
+                txt1.value = ''
+
+            }
+        </script>
+
+
+    </body>
+</html>
