@@ -1,0 +1,16 @@
+l = []
+b = [54, 66, 77]
+l.append (23)
+l.append (54)
+l.append (100)
+l.append (137)
+l.extend (b)
+l.insert (3, 122)
+l.remove (54)
+l.pop (2)
+print(l.count(66))
+print (l.index(77))
+l.sort ()
+l.reverse ()
+l.clear ()
+print (l)
