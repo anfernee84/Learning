@@ -1,3 +1,3 @@
-d = dict.fromkeys (['a', 'b', 'c',], 1)
+d = {a : a ** 2 for a in range(8)}
 
 print (d)
