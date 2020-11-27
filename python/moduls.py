@@ -1,6 +1,11 @@
 import os
 import random
-from modules import m
+import math
+import m
+from m import pi
 x = random.randrange(1, 100)
 print (x)
-print (m.pi)
+print (pi)
+m.some_try()
+m.func()
+print (math.pi)
