@@ -5,9 +5,9 @@ while True:
     except ValueError or TypeError:
         print(f"is not a digit {a}")
         a = input ("Enter a digit: ")
-    else:
-        a = int(a)
-        break
+#    else:
+#        a = int(a)
+#        break
 #    print (a)
 if a % 2 == 0:
     print (f"{a} is even")
