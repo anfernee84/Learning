@@ -8,7 +8,15 @@ def fibonacci(n):
 
 
 def main():
-    print(fibonacci(int(input("Enter fibo digit: "))))
+    while True:
+        n = (input("Enter fibo digit: "))       
+        try:
+            n = int(n)
+        except ValueError or TypeError:
+            print (f"'{n}' is not a digit")
+        else:
+            print(fibonacci(n))
+            break
 
 
 if __name__ == '__main__':
