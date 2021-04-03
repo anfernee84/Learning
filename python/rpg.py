@@ -1,15 +1,12 @@
-# | | | | | |
-# | | | | | |
-# | | | | | |
-# | | | | | |
-# | | | | | |
+from random import randint
 
 n = int(input('Map size n: '))
 m = int(input('Map size m: '))
 
 x = int(input('Player x: '))
 y = int(input('Player y: '))
-
+portal_x = randint(0, n-1)
+portal_y = randint(0, n-1)
 print(f'Generating map {n}x{m}...')
 direction = 'initially'
 
@@ -29,6 +26,10 @@ while True:
                 print(f'Moving character {direction} to {x}:{y}')
                 cell = '|X'
 
+            elif portal_x == j and portal_y == i:
+#                    print(f'Moving character {direction} to {x}:{y}')
+                cell = '|O'
+
             row += cell
 
         row += '|\n'
@@ -36,6 +37,9 @@ while True:
         world_map += row
 
     print(world_map)
+    if x == portal_x and y == portal_y:
+        print('You won!')
+        break
 
     action = input('Action: ')
 
