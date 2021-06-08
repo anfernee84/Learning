@@ -8,7 +8,7 @@ for ch in message:
         encoded_message += chr((ord(ch) - 97 + offset) % 26 + 97)
     else:
         encoded_message += ch
-print(encoded_message) 
+print(encoded_message)
    
 
 

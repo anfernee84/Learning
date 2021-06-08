@@ -38,8 +38,3 @@ while True:
     elif operator == "/":
         result /= operand
 print (result)
-
-
-    
-
-
