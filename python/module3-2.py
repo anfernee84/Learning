@@ -119,7 +119,7 @@ print(marks)
 keys = [1,2,3]
 values = [4,5,6]
 print(dict(zip(keys, values)))
-'''
+
 
 
 s = {1,2,3}
@@ -131,4 +131,21 @@ print(s&s2)
 print(s^s2)
 print(s|s2)
 print(s - s2)
+
+'''
+
+d = {3:5, 6:2, 7:8, 9:0, 10:1}
+min = {}
+print (d)
+print(sum(d.keys()))
+print(sum(d.values()))
+print(sum(d.values()) + sum(d.keys()))
+
+for i in d.keys():
+    if not i%2:
+        print(i)
+
+print (max(d.keys()))
+
+
 
